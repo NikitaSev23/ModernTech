@@ -1,0 +1,66 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Students";
+}
+
+<div id="students">
+    <div id="list_of_students">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input id="maincheckbox" class="custom-checkbox" onchange="CheckAll(this)" type="checkbox" name="name" />
+                        <label for="maincheckbox"></label>
+                    </th>
+                    <th>ID</th>
+                    <th>ФИО</th>
+                    <th>Номер зачетной книжки</th>
+                    <th>Дата рождения</th>
+                    <th>Дата поступления</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <input type="checkbox" /> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="CRUD">
+        <fieldset class="C">
+            <legend>Добавление данных</legend>
+            <label for="fullname">ФИО</label>
+            <input name="fullname" type="text">
+            <label for="numberRB">Номер з.к.</label>
+            <input name="numberRB" type="text">
+            <label for="birthdate">Дата рождения</label>
+            <input name="birthdate" type="date">
+            <label for="enrollementdate">Дата зачисления</label>
+            <input name="enrollementdate" type="date">
+        </fieldset>
+        <button class="mybuttons crud" onclick="PostStudent()">Добавить</button>
+        <button class="mybuttons crud" onclick="DeleteStudent()">Удалить строку(и)</button>
+    </div>
+    <div id="Filter">
+        <fieldset class="F">
+            <legend>Фильтрация данных</legend>
+            <label for="enrollfrom">Поступившие после</label>
+            <input name="enrollfrom" type="date">
+            <label for="enrollto">Поступившие до</label>
+            <input name="enrollto" type="date">
+            <label for="agefrom">Возраст с</label>
+            <input name="agefrom" type="number" min="0">
+            <label for="ageto">до</label>
+            <input name="ageto" type="number" min="0">
+        </fieldset>
+        <button class="mybuttons filter" onclick="Filter()">Фильтровать</button>
+        <button class="mybuttons filter" onclick="ResetFilter()">Сброс фильтров</button>
+    </div>
+</div>
+

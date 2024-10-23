@@ -1,0 +1,118 @@
+body {
+    margin: 0%;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+}
+button{
+    cursor: pointer;
+}
+
+#students {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    grid-template-areas: "list_of_students CRUD"
+        "list_of_students Filter";
+    grid-template-rows: 300px 300px;
+    grid-template-columns: minmax(500px, 50vw) 400px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#list_of_students {
+    grid-area: list_of_students;
+    overflow-y: auto;
+    background-color: #edf6f9;
+    /*border: 1px solid black;*/
+    padding: 3px;
+    table
+
+{
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+th, td {
+    border: 1px solid rgb(137, 137, 137);
+    padding: 10px 10px 10px 10px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #dbd4d4;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+ 
+}
+
+tbody td {
+    height: 20px;
+    background-color: white;
+}
+
+}
+
+#CRUD {
+    grid-area: CRUD;
+    background-color: #83c5be;
+    padding: 10px;
+    border-radius: 0px 20px 0px 0px;
+    color: #003439;
+    input{
+             margin-right: 65px;
+             margin-bottom: 5px;
+             font-size: 15px;
+         }
+    fieldset{
+        border: 2.5px black solid;
+        border-radius: 0 15px 0 0;
+    }
+}
+legend {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+#Filter {
+    grid-area: Filter;
+    background-color: #006d77;
+    padding: 10px;
+    border-radius: 0px 0px 20px 0px;
+    color: #edf6f9;
+    input
+    {
+        margin-right: 55px;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    input[type="number"] {
+        width: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+        text-align: center;
+    }
+    fieldset
+    {
+        border: 2.5px black solid;
+        border-radius: 0 0 15px 0;
+        
+    }
+}
+
+.mybuttons {
+    border-radius: 20px;
+    border: 2px black solid;
+    width: auto;
+    height: auto;
+    padding: 5px 20px 5px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #edf6f9;
+    margin: 7px;
+}
+
