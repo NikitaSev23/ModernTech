@@ -1,7 +1,9 @@
 ﻿name: .NET without DataBase
 run-name: ${{ github.actor }} do Real CI 🚀🚀🚀
 
-on: [push]
+on: 
+  workflow_dispatch:
+  push:
 
 jobs:
   build:
